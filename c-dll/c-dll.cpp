@@ -42,3 +42,12 @@ C_DLL_API void GiveMeNumbersInStructAsPointer(Numbers* numbers, int a, int b)
   numbers->number0 = a;
   numbers->number1 = b;
 }
+
+C_DLL_API void PrintDeviceInformation(DeviceInformation const *devInfo)
+{
+  printf("DeviceNumber = %d\n", devInfo->DeviceNumber);
+  printf("DeviceMode   = %d\n", devInfo->DeviceMode);
+  printf("ModuleIndex  = %d\n", devInfo->ModuleIndex);
+  wprintf(L"Description= '%s'\n", devInfo->Description);
+  fflush(stdout);
+}
